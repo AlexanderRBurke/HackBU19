@@ -1,0 +1,63 @@
+<% include partials/header %>
+        <% include partials/navbar %>
+        <style type="text/css">
+
+        body{
+          background: url("stylesheets/images/communitybackground.jpg");
+          background-size: 1400px 758px;
+        }
+
+
+        #content {
+          color: green;
+          text-align: center;
+          padding-top: 3.5%;
+        }
+
+        hr.style-seven {
+            overflow: visible; /* For IE */
+            height: 30px;
+            border-style: solid;
+            border-color: black;
+            border-width: 1px 0 0 0;
+            border-radius: 20px;
+        }
+        hr.style-seven:before { /* Not really supposed to work, but does */
+            display: block;
+            content: "";
+            height: 30px;
+            margin-top: -31px;
+            border-style: solid;
+            border-color: black;
+            border-width: 0 0 1px 0;
+            border-radius: 20px;
+        }
+
+        #button {
+            margin-top: 20px;
+        }
+
+        </style>
+		<div class="container">
+			<div id="content">
+					<div class="row s12 m4 l2">
+						<div class="center-align">
+							<header>
+								<h1 ><strong>Welcome to Kibbutz</strong>!</h1>
+							</header>
+								<hr class="style-seven" >
+							<p><strong>Kibbutz is a community based network used for funding the creation of projects of user related interests. </strong> </p>
+							<a href="/projects" id="button" class="waves-effect waves-light btn light-green darken-3">Start Exploring Projects Now!</a>
+						</div>
+					</div>
+			</div>
+		</div>
+		<!-- Scripts -->
+			<script src="landing/js/jquery.min.js"></script>
+			<script src="landing/js/jquery.scrolly.min.js"></script>
+			<script src="landing/js/skel.min.js"></script>
+			<script src="landing/js/skel-viewport.min.js"></script>
+			<script src="landing/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="landing/js/main.js"></script>
+<% include partials/footer %>

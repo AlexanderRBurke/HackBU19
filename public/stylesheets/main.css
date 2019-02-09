@@ -1,0 +1,14 @@
+html{
+  height: 100%;
+  font-family: 'Patua One';
+}
+
+#logo {
+  margin-left: 20px;
+}
+.card{
+    font-family: "Open Sans";
+}
+.card-title{
+    background: rgba(0,0,0,0.5);
+}
