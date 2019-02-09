@@ -4,9 +4,7 @@ var express        = require("express"),
     methodOverride = require("method-override");
 
 //Requiring routes
-var projectRoutes = require("./routes/projects"),
-    indexRoutes = require("./routes/index"),
-    profileRoutes = require("./routes/profile");
+var    indexRoutes = require("./routes/index");
 
 //Middleware 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -17,8 +15,6 @@ app.set("view engine", "ejs");
 
 //Routes
 app.use("/", indexRoutes);
-app.use("/projects", projectRoutes);
-app.use("/profiles", profileRoutes);
 
 var port = process.env.PORT || 8080;
 app.listen(port, function(){
