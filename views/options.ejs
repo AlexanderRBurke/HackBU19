@@ -75,28 +75,31 @@
             <div>
 </div>
    <div class="dropdown">
+	<label>Activity Preference</label>
         <select style="display: inline;">
-          <option value = "Leisure">Leisure</option>
-          <option value = "Mild">Mild</option>
-          <option value = "Extreme">Extreme</option>
+        <option value = "Leisure">Leisure</option>
+        <option value = "Mild">Mild</option>
+        <option value = "Extreme">Extreme</option>
         </select>
+	
     </div>
 
    <div class="dropdown2">
+	<label>Cuisine Preference</label>
         <select style="display: inline;">
-          <option value = "Leisure">Leisure</option>
-          <option value = "Mild">Mild</option>
-          <option value = "Extreme">Extreme</option>
-        </select>
+        <option value = "Leisure">Leisure</option>
+        <option value = "Mild">Mild</option>
+        <option value = "Extreme">Extreme</option>
+        </select>	
     </div>
 
-   <div class="dropdown3">
-        <select style="display: inline;">
-          <option value = "Leisure">Leisure</option>
-          <option value = "Mild">Mild</option>
-          <option value = "Extreme">Extreme</option>
-        </select>
-    </div>
+   <div class="input-field">
+	<label>Date</label>
+	<input type="text" class="datepicker">
+	</select>
+	
+</div>
+
             <a href="/options" id="button" class="waves-effect waves-light btn blue-grey darken-2">Click Here for Adventure!</a>
 
             </div>
@@ -104,6 +107,12 @@
             </div>
             </div>
             <!-- Scripts -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	    <script>
+    		const elems = document.querySelectorAll('.datepicker');
+    		M.Datepicker.init(elems, {});
+		</script>
+	    
             <script src="landing/js/jquery.min.js"></script>
             <script src="landing/js/jquery.scrolly.min.js"></script>
             <script src="landing/js/skel.min.js"></script>
