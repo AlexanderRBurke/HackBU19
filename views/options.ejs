@@ -75,20 +75,59 @@
             <div>
 </div>
    <div class="dropdown">
-        <select name="activityLevel" style="display: inline;">
-          <option value = "Leisure">Leisure</option>
-          <option value = "Mild">Mild</option>
-          <option value = "Extreme">Extreme</option>
-        </select>
-    </div>
-
-   <div class="dropdown2">
+	<label>Activity Preference</label>
         <select style="display: inline;">
-          <option value = "Leisure">Leisure</option>
-          <option value = "Mild">Mild</option>
-          <option value = "Extreme">Extreme</option>
+        <option value = "Leisure">Leisure</option>
+        <option value = "Mild">Mild</option>
+        <option value = "Extreme">Extreme</option>
         </select>
+	
     </div>
+<form action="#">
+    <p>
+      <label>
+        <input type="checkbox" />
+        <span>Chinese</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" />
+        <span>Japanese</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" />
+        <span>Italian</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" />
+        <span>Mexican</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" />
+        <span>American</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" />
+        <span>Vietnamese</span>
+      </label>
+    </p>
+  </form>	
+
+   <div class="input-field">
+	<label>Date</label>
+	<input type="text" class="datepicker">
+	</select>
+	
+</div>
 
    <div class="dropdown3">
         <select style="display: inline;">
@@ -131,6 +170,12 @@
             </div>
             </div>
             <!-- Scripts -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	    <script>
+    		const elems = document.querySelectorAll('.datepicker');
+    		M.Datepicker.init(elems, {});
+		</script>
+	    
             <script src="landing/js/jquery.min.js"></script>
             <script src="landing/js/jquery.scrolly.min.js"></script>
             <script src="landing/js/skel.min.js"></script>
