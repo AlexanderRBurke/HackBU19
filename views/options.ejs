@@ -64,10 +64,10 @@ document.getElementsByTagName("input").value = "";
 	<label>Date</label>
 	<input type="text" class="datepicker">
 	</select>
-	
-</div>        
+
+</div>
 	<p>Budget</p>
-        
+
 
 
 
@@ -89,10 +89,10 @@ document.getElementsByTagName("input").value = "";
         <option value = "Mild">Mild</option>
         <option value = "Extreme">Extreme</option>
         </select>
-	
+
     </div>
 
-    <label>Cuisine Preferences</label> 
+    <label>Cuisine Preferences</label>
     <p>
       <label>
         <input id ="chinese" type="checkbox" value="off"/>
@@ -144,14 +144,14 @@ document.getElementsByTagName("input").value = "";
     </p>
   </form>
 
- 
+
 
         <script> function process(){
          // var excel = require('exceljs');
          // var workbook = new excel.Workbook();
           var foodStr ="";
           var actStr= "";
-          
+
           var inputElements = document.getElementsByTagName('input');
     for(var i=0; inputElements[i]; ++i){
       if(inputElements[i].type == 'checkbox'){
@@ -253,7 +253,7 @@ document.getElementsByTagName("input").value = "";
             });
          */
 
-        
+
 
 </script>
 <a onclick='process()' href="/results" id="button" class="waves-effect waves-light btn blue-grey darken-2">Click Here for Adventure!</a>
