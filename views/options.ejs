@@ -181,6 +181,7 @@ document.getElementsByTagName("input").value = "";
           if(document.getElementById("vietnamese").value=="on"){
             foodStr = "Phuong Nam";
           }
+          
           /*workbook.xlsx.readFile('../HACKBU Research.xlsx')input
             .then(function(worksheet){
             var tagCol = worsheet.getColumn('H');
@@ -220,7 +221,28 @@ document.getElementsByTagName("input").value = "";
           }
           console.log(actStr);
 
+ var form = document.createElement("form");
+    form.setAttribute("action", "/results");
+
+  /*
+            var hiddenField = document.createElement("input");
+            hiddenField.setAttribute("type", "hidden");
+            hiddenField.setAttribute("name", );
+            hiddenField.setAttribute("value", params[key]);
+
+            form.appendChild(hiddenField);
+  
+
+    document.body.appendChild(form);
+    form.submit();
+*/
+      localStorage.setItem("foodStr",foodStr);
+      localStorage.setItem("actStr",actStr);
+      
+
+
         }
+
 
         /*  var actCol = worsheet.getColumn('R');
             var actIndex =-1;

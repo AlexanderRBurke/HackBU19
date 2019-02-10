@@ -52,10 +52,11 @@
 							</header>
 								<hr class="style-seven" > 
 							<p id="instructions"><strong> Get ready for an adventure! </strong> </p>
-							<div class= "col s3">Put image here</div>
-							<div class= "col s9">Put description here</div>
+							<div id="lol" class= "col s3">Put image here</div>
+							<div id="thing" class= "col s9">Put description here</div>
  							
-<
+<script> document.getElementById("lol").innerHTML=localStorage.getItem("actStr");</script>
+<script> document.getElementById("thing").innerHTML=localStorage.getItem("foodStr");</script>
 
 
 
