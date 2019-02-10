@@ -82,7 +82,7 @@
 </div>
    <div class="dropdown">
 	<label>Activity Preference</label>
-        <select style="display: inline;">
+        <select id="actPref" style="display: inline;">
         <option value = "Leisure">Leisure</option>
         <option value = "Mild">Mild</option>
         <option value = "Extreme">Extreme</option>
@@ -93,37 +93,37 @@
     <label>Cuisine Preferences</label> 
     <p>
       <label>
-        <input type="checkbox" />
+        <input id ="chinese" type="checkbox" />
         <span>Chinese</span>
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" />
+        <input id="japanese" type="checkbox" />
         <span>Japanese</span>
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" />
+        <input id="italian" type="checkbox" />
         <span>Italian</span>
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" />
+        <input id="mexican" type="checkbox" />
         <span>Mexican</span>
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" />
+        <input id="american" type="checkbox" />
         <span>American</span>
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" />
+        <input id="vietnamese" type="checkbox" />
         <span>Vietnamese</span>
       </label>
     </p>
@@ -154,10 +154,29 @@
         </select>
     </div>
     
-    <!--    <script> function process(){
+       <script> function process(){
           var excel = require('exceljs');
           var workbook = new excel.Workbook();
-          workbook.xlsx.readFile('../HACKBU Research.xlsx')
+          var foodStr ="";
+          if(document.getElementById("chinese").value==true){
+              foodStr = "Moon Star";
+            }
+          if(document.getElementById("japanese").value==true){
+              foodStr = "Sakura";
+            }
+          if(document.getElementById("mexican").value==true){
+              foodStr = "Chipotle";
+            }
+          if(document.getElementById("american").value==true){
+            if(document.getElementById("textinput").innerHTML<200)
+              foodStr = "Speedie and Rib Pit";
+            else
+              foodStr = "Lost Dog Cafe & Lounge";
+            }
+          if(document.getElementById("vietnamese").value==true){
+              foodStr = "Phuong Name";
+            }
+          /*workbook.xlsx.readFile('../HACKBU Research.xlsx')input
           .then(function(worksheet){
              var tagCol = worsheet.getColumn('H');
              var foodIndex =-1;
@@ -165,20 +184,23 @@
                   if(cell.text.includes()){//TODO
                     foodIndex=rowNumber;
                   }
-               });
+               });*/
              if(foodIndex==-1){
                }
-             var actCol = worsheet.getColumn('R');
+          
+          if()
+
+           /*  var actCol = worsheet.getColumn('R');
              var actIndex =-1;
              dobCol.eachCell(fuction(cell,rowNumber){
                   if(cell.text.includes()){
                     foodIndex=rowNumber;
                   }
                });
-
+            */
             
             };
-        } -->
+        } 
           </script>
             <a onclick='process()' href="/results" id="button" class="waves-effect waves-light btn blue-grey darken-2">Click Here for Adventure!</a>
 
