@@ -21,3 +21,8 @@ html{
 .thumb.active{
   display:none;
 }
+
+  label{
+    color: black;
+    font-size: 100%;
+  }
