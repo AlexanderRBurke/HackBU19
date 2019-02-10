@@ -60,13 +60,7 @@
 </div>        
 	<p>Budget</p>
         
-        <script> function updateTextInput(val){
-          if(val==500)
-            document.getElementById("textinput").innerHTML="500+";
-          else
-            document.getElementById("textinput").innerHTML=val;
-            console.log("hi");
-          }  </script>
+
 
 
         <div>
@@ -76,7 +70,7 @@
             id="start" name="volume"
             min="0" max="500" steps="10" onchange="updateTextInput(this.value);">
             <center style="center-align" id="textinput"></center>
-            <script>document.getElementById("textinput").innerHTML=document.getElementById("start").value;</script>
+
             </div>
             <div>
 </div>
@@ -146,13 +140,6 @@
 
  
 
-   <div class="dropdown3">
-        <select style="display: inline;">
-          <option value = "Leisure">Leisure</option>
-          <option value = "Mild">Mild</option>
-          <option value = "Extreme">Extreme</option>
-        </select>
-    </div>
     
     <!--    <script> function process(){
           var excel = require('exceljs');
