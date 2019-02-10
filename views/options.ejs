@@ -52,10 +52,10 @@
 							</header>
 								<hr class="style-seven" >
 							<p id="instructions"><strong>Fill out the form so we can personlize your date </strong> </p>
-<form action="/results">
-	  <div name="date" class="input-field">
+<form action="#">
+	  <div class="input-field">
 	<label>Date</label>
-	<input type="text" class="datepicker"/>
+	<input type="text" class="datepicker">
 	</select>
 	
 </div>        
@@ -70,8 +70,8 @@
           <input type="range"
             id="start" name="volume"
             min="0" max="500" steps="10">
-            <center style="white-text center-align" id="textinput"></center>
 
+            <center style="center-align" id="textinput"></center>
             </div>
             <div>
 </div>
@@ -125,92 +125,115 @@
     <label>Do You Need Transportation?</label>
     <p>
       <label>
-        <input name="transport" type="radio" value="yes" />
+        <input name="group1" type="radio" />
         <span>Yes</span>
       </label>
     </p>
     <p>
       <label>
-        <input name="transport" type="radio" value="no" />
+        <input name="group1" type="radio" />
         <span>No</span>
       </label>
     </p>
-<button class="btn waves-effect waves-light" type="submit" name="action">Submit
-    <i class="material-icons right">send</i>
-  </button>
   </form>
-
-        
 
  
 
-    
-       <script> function process(){
-          var excel = require('exceljs');
-          var workbook = new excel.Workbook();
+        <script> function process(){
+         // var excel = require('exceljs');
+         // var workbook = new excel.Workbook();
           var foodStr ="";
-          if(document.getElementById("chinese").value==true){
-              foodStr = "Moon Star";
-            }
-          if(document.getElementById("japanese").value==true){
-              foodStr = "Sakura";
-            }
-          if(document.getElementById("mexican").value==true){
-              foodStr = "Chipotle";
-            }
-          if(document.getElementById("american").value==true){
+          var actStr= "";
+          console.log(document.getElementById("vietnamese").value);
+          if(document.getElementById("chinese").value=="on"){
+            foodStr = "Moon Star";
+          }
+          if(document.getElementById("japanese").value=="on"){
+            foodStr = "Sakura";
+          }
+          if(document.getElementById("mexican").value=="on"){
+            foodStr = "Chipotle";
+          }
+          if(document.getElementById("american").value=="on"){
             if(document.getElementById("textinput").innerHTML<200)
               foodStr = "Speedie and Rib Pit";
             else
               foodStr = "Lost Dog Cafe & Lounge";
-            }
-          if(document.getElementById("vietnamese").value==true){
-              foodStr = "Phuong Name";
-            }
+          }
+          if(document.getElementById("vietnamese").value=="on"){
+            foodStr = "Phuong Nam";
+          }
           /*workbook.xlsx.readFile('../HACKBU Research.xlsx')input
-          .then(function(worksheet){
-             var tagCol = worsheet.getColumn('H');
-             var foodIndex =-1;
-             dobCol.eachCell(fuction(cell,rowNumber){
-                  if(cell.text.includes()){//TODO
-                    foodIndex=rowNumber;
-                  }
-               });*/
-             if(foodIndex==-1){
-               }
-          
-          if()
+            .then(function(worksheet){
+            var tagCol = worsheet.getColumn('H');
+            var foodIndex =-1;
+            dobCol.eachCell(fuction(cell,rowNumber){
+            if(cell.text.includes()){//TODO
+            foodIndex=rowNumber;
+            }
+            });*/
+         // if(foodIndex==-1){
+          //}
+          console.log(foodStr);
+          var leisures = ["Uncorked Creations","Apple Hills","Hidden Hot Springs at Otsiningo Park"];
+          var milds = ["Binghamton Zoo at Ross Park","Robot City Games and Arcade","Xscapes","Skate Estate","Paddle Boarding at Finger Lakes"];
+          var extremes = ["Endless Mountain Skydivers", "Endless Mountain Outfitters","Greek Peaks", "Horseback Riding","Obstacle Course Facility"];
+          var budget = document.getElementById("textinput").innerHTML;
+          if(document.getElementById("actPref").value=="Leisure"){
+            var highLes = ["Uncorked Creations", "Hidden Hot Springs at Otsinigo Park"];
+            if(budget>=80){
+              actStr = highLes[Math.floor(Math.random() * 2)];
+            }else {actStr ="Apple Hills";}
+          } else if(document.getElementById("actPref").value=="Mild"){
+            var lowMild = ["Binhamton Zoo at Ross Park","Skate Estate"];
+            var highMild = ["Robot City Games and Arcade","Xscapes","Paddle Boarding at Finger Lakes"];
+            if(budget>=80){
+              actStr = highMild[Math.floor(Math.random() * 3)];}
+            else{
+              actStr = lowMild[Math.floor(Math.random() * 2)];}
+          }
+          else{
+            var lowExtreme = ["Horseback Riding","Obstacle Course Facility"];
+            var highExtreme = ["Endless Mountain Skydivers","Endless Mountain Outfitters","Greek Peaks"];
+            if(budget>=80){
+              actStr = highExtreme[Math.floor(Math.random() * 3)];}
+            else{
+              actStr = lowExtreme[Math.floor(Math.random() * 2)];}
+          }
+          console.log(actStr);
 
-           /*  var actCol = worsheet.getColumn('R');
-             var actIndex =-1;
-             dobCol.eachCell(fuction(cell,rowNumber){
-                  if(cell.text.includes()){
-                    foodIndex=rowNumber;
-                  }
-               });
-            */
-            
-            };
-        } 
-          </script>
-            <!-- <a onclick='process()' href="/results" id="button" class="waves-effect waves-light btn blue-grey darken-2">Click Here for Adventure!</a> -->
+        }
 
-            </div>
-            </div>
-            </div>
-            </div>
-            <!-- Scripts -->
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-	    <script>
-    		const elems = document.querySelectorAll('.datepicker');
-    		M.Datepicker.init(elems, {});
-		</script>
-	    
-            <script src="landing/js/jquery.min.js"></script>
-            <script src="landing/js/jquery.scrolly.min.js"></script>
-            <script src="landing/js/skel.min.js"></script>
-            <script src="landing/js/skel-viewport.min.js"></script>
-            <script src="landing/js/util.js"></script>
-            <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-            <script src="landing/js/main.js"></script>
-            <% include partials/footer %>
+        /*  var actCol = worsheet.getColumn('R');
+            var actIndex =-1;
+            dobCol.eachCell(fuction(cell,rowNumber){
+            if(cell.text.includes()){
+            foodIndex=rowNumber;
+            }
+            });
+         */
+
+        
+
+</script>
+<a onclick='process()' href="/results" id="button" class="waves-effect waves-light btn blue-grey darken-2">Click Here for Adventure!</a>
+
+</div>
+</div>
+</div>
+</div>
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+const elems = document.querySelectorAll('.datepicker');
+M.Datepicker.init(elems, {});
+</script>
+
+<script src="landing/js/jquery.min.js"></script>
+<script src="landing/js/jquery.scrolly.min.js"></script>
+<script src="landing/js/skel.min.js"></script>
+<script src="landing/js/skel-viewport.min.js"></script>
+<script src="landing/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="landing/js/main.js"></script>
+<% include partials/footer %>
