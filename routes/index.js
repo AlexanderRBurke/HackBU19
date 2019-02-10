@@ -8,7 +8,7 @@ router.get("/", function(req, res){
 
 //Routes
 router.get("/options", function(req, res){
-    res.render("landing");//not landing
+    res.render("options");//not landing
 });
 
 module.exports = router;
