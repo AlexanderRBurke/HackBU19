@@ -11,4 +11,9 @@ router.get("/options", function(req, res){
     res.render("options");//not landing
 });
 
+//Routes
+router.get("/results", function(req, res){
+    res.render("results");//not landing
+});
+
 module.exports = router;

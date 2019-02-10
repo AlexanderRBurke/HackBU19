@@ -6,6 +6,7 @@ var express        = require("express"),
 //Requiring routes
 var    indexRoutes = require("./routes/index");
        optionsRoutes= require("./routes/options");
+       resultsRoutes= require("./routes/results");
 
 //Middleware 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -17,6 +18,7 @@ app.set("view engine", "ejs");
 //Routes
 app.use("/", indexRoutes);
 app.use("/options",optionsRoutes);
+app.use("/results",optionsRoutes);
 
 var port = process.env.PORT || 8080;
 app.listen(port, function(){

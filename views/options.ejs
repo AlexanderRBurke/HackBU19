@@ -75,7 +75,7 @@
             <div>
 </div>
    <div class="dropdown">
-        <select style="display: inline;">
+        <select name="activityLevel" style="display: inline;">
           <option value = "Leisure">Leisure</option>
           <option value = "Mild">Mild</option>
           <option value = "Extreme">Extreme</option>
@@ -97,7 +97,34 @@
           <option value = "Extreme">Extreme</option>
         </select>
     </div>
-            <a href="/options" id="button" class="waves-effect waves-light btn blue-grey darken-2">Click Here for Adventure!</a>
+    
+    <!--    <script> function process(){
+          var excel = require('exceljs');
+          var workbook = new excel.Workbook();
+          workbook.xlsx.readFile('../HACKBU Research.xlsx')
+          .then(function(worksheet){
+             var tagCol = worsheet.getColumn('H');
+             var foodIndex =-1;
+             dobCol.eachCell(fuction(cell,rowNumber){
+                  if(cell.text.includes()){//TODO
+                    foodIndex=rowNumber;
+                  }
+               });
+             if(foodIndex==-1){
+               }
+             var actCol = worsheet.getColumn('R');
+             var actIndex =-1;
+             dobCol.eachCell(fuction(cell,rowNumber){
+                  if(cell.text.includes()){
+                    foodIndex=rowNumber;
+                  }
+               });
+
+            
+            };
+        } -->
+          </script>
+            <a onclick='process()' href="/results" id="button" class="waves-effect waves-light btn blue-grey darken-2">Click Here for Adventure!</a>
 
             </div>
             </div>
