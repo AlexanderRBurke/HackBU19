@@ -94,37 +94,37 @@ document.getElementsByTagName("input").value = "";
     <label>Cuisine Preferences</label> 
     <p>
       <label>
-        <input id ="chinese" type="checkbox" />
+        <input id ="chinese" type="checkbox" value="off"/>
         <span>Chinese</span>
       </label>
     </p>
     <p>
       <label>
-        <input id="japanese" type="checkbox" />
+        <input id="japanese" type="checkbox" value="off"/>
         <span>Japanese</span>
       </label>
     </p>
     <p>
       <label>
-        <input id="italian" type="checkbox" />
+        <input id="italian" type="checkbox" value="off" />
         <span>Italian</span>
       </label>
     </p>
     <p>
       <label>
-        <input id="mexican" type="checkbox" />
+        <input id="mexican" type="checkbox" value="off"/>
         <span>Mexican</span>
       </label>
     </p>
     <p>
       <label>
-        <input id="american" type="checkbox" />
+        <input id="american" type="checkbox" value="off"/>
         <span>American</span>
       </label>
     </p>
     <p>
       <label>
-        <input id="vietnamese" type="checkbox" />
+        <input id="vietnamese" type="checkbox" value="off"/>
         <span>Vietnamese</span>
       </label>
     </p>
@@ -150,6 +150,17 @@ document.getElementsByTagName("input").value = "";
          // var workbook = new excel.Workbook();
           var foodStr ="";
           var actStr= "";
+          
+          var inputElements = document.getElementsByTagName('input');
+    for(var i=0; inputElements[i]; ++i){
+      if(inputElements[i].type == 'checkbox'){
+        if(inputElements[i].checked){
+           inputElements[i].value="on";
+           //break;
+        }
+      }
+}
+
           console.log(document.getElementById("vietnamese").value);
           if(document.getElementById("chinese").value=="on"){
             foodStr = "Moon Star";
