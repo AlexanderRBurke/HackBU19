@@ -52,9 +52,10 @@
 							</header>
 								<hr class="style-seven" >
 							<p id="instructions"><strong>Fill out the form so we can personlize your date </strong> </p>
-	  <div class="input-field">
+<form action="/results">
+	  <div name="date" class="input-field">
 	<label>Date</label>
-	<input type="text" class="datepicker">
+	<input type="text" class="datepicker"/>
 	</select>
 	
 </div>        
@@ -76,67 +77,70 @@
 </div>
    <div class="dropdown">
 	<label>Activity Preference</label>
-        <select style="display: inline;">
-        <option value = "Leisure">Leisure</option>
-        <option value = "Mild">Mild</option>
-        <option value = "Extreme">Extreme</option>
+        <select name="activity" style="display: inline;">
+        <option value = "leisure">Leisure</option>
+        <option value = "mild">Mild</option>
+        <option value = "extreme">Extreme</option>
         </select>
 	
     </div>
-<form action="#">
+
     <label>Cuisine Preferences</label> 
     <p>
       <label>
-        <input type="checkbox" />
+        <input name="chinese" type="checkbox" />
         <span>Chinese</span>
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" />
+        <input name="japanese" type="checkbox" />
         <span>Japanese</span>
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" />
+        <input name="italian" type="checkbox" />
         <span>Italian</span>
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" />
+        <input name="mexican" type="checkbox" />
         <span>Mexican</span>
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" />
+        <input name="american" type="checkbox" />
         <span>American</span>
       </label>
     </p>
     <p>
       <label>
-        <input type="checkbox" />
+        <input name="vietnamese" type="checkbox" />
         <span>Vietnamese</span>
       </label>
     </p>
-  </form>	
-<form action="#">
     <label>Do You Need Transportation?</label>
     <p>
       <label>
-        <input name="group1" type="radio" />
+        <input name="transport" type="radio" value="yes" />
         <span>Yes</span>
       </label>
     </p>
     <p>
       <label>
-        <input name="group1" type="radio" />
+        <input name="transport" type="radio" value="no" />
         <span>No</span>
       </label>
     </p>
+<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
   </form>
+
+        
 
  
 
@@ -167,7 +171,7 @@
             };
         } -->
           </script>
-            <a onclick='process()' href="/results" id="button" class="waves-effect waves-light btn blue-grey darken-2">Click Here for Adventure!</a>
+            <!-- <a onclick='process()' href="/results" id="button" class="waves-effect waves-light btn blue-grey darken-2">Click Here for Adventure!</a> -->
 
             </div>
             </div>
